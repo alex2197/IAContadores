@@ -1,0 +1,48 @@
+{
+  "_advertencia": "Estas reglas son EJEMPLO/PLACEHOLDER para fines de demostración del MVP. Los codigoAgrupador NO son el catálogo oficial vigente del SAT (Anexo 24). Antes de usar esto con datos reales, un contador (Misael) debe sustituir este archivo por el catálogo de cuentas real de cada cliente y las reglas de cumplimiento vigentes.",
+  "version": "0.1-ejemplo",
+  "reglasClasificacion": [
+    { "prefijo": "100", "tipo": "Activo", "nombre": "Caja y bancos", "codigoAgrupador": "100.01" },
+    { "prefijo": "105", "tipo": "Activo", "nombre": "Clientes", "codigoAgrupador": "105.01" },
+    { "prefijo": "115", "tipo": "Activo", "nombre": "IVA acreditable", "codigoAgrupador": "115.01" },
+    { "prefijo": "120", "tipo": "Activo", "nombre": "Inventarios", "codigoAgrupador": "120.01" },
+    { "prefijo": "150", "tipo": "Activo", "nombre": "Activo fijo", "codigoAgrupador": "150.01" },
+    { "prefijo": "200", "tipo": "Pasivo", "nombre": "Proveedores", "codigoAgrupador": "200.01" },
+    { "prefijo": "215", "tipo": "Pasivo", "nombre": "IVA trasladado", "codigoAgrupador": "215.01" },
+    { "prefijo": "220", "tipo": "Pasivo", "nombre": "Impuestos por pagar (ISR/retenciones)", "codigoAgrupador": "220.01" },
+    { "prefijo": "300", "tipo": "Capital", "nombre": "Capital social", "codigoAgrupador": "300.01" },
+    { "prefijo": "310", "tipo": "Capital", "nombre": "Resultados de ejercicios anteriores", "codigoAgrupador": "310.01" },
+    { "prefijo": "400", "tipo": "Ingreso", "nombre": "Ingresos por servicios", "codigoAgrupador": "400.01" },
+    { "prefijo": "410", "tipo": "Ingreso", "nombre": "Ingresos por arrendamiento", "codigoAgrupador": "410.01" },
+    { "prefijo": "500", "tipo": "Costo", "nombre": "Costo de servicios", "codigoAgrupador": "500.01" },
+    { "prefijo": "600", "tipo": "Gasto", "nombre": "Gastos de administración", "codigoAgrupador": "600.01" },
+    { "prefijo": "610", "tipo": "Gasto", "nombre": "Gastos de venta", "codigoAgrupador": "610.01" },
+    { "prefijo": "620", "tipo": "Gasto", "nombre": "Gastos financieros", "codigoAgrupador": "620.01" }
+  ],
+  "reglasCumplimiento": [
+    {
+      "id": "partida-doble",
+      "nombre": "Cuadre de partida doble",
+      "descripcion": "El total de cargos debe ser igual al total de abonos en la balanza.",
+      "severidad": "alta"
+    },
+    {
+      "id": "cuenta-sin-clasificar",
+      "nombre": "Cuenta sin código agrupador",
+      "descripcion": "Toda cuenta de la balanza debe poder asignarse a un código agrupador SAT para la contabilidad electrónica.",
+      "severidad": "media"
+    },
+    {
+      "id": "naturaleza-saldo",
+      "nombre": "Naturaleza de saldo inconsistente",
+      "descripcion": "Cuentas de Activo/Gasto/Costo con saldo acreedor inusual, o de Pasivo/Capital/Ingreso con saldo deudor inusual, se marcan para revisión (puede ser normal en algunos casos, pero se reporta como posible contingencia).",
+      "severidad": "media"
+    },
+    {
+      "id": "cuenta-sin-movimiento-relevante",
+      "nombre": "Cuenta con saldo pero sin nombre / dato incompleto",
+      "descripcion": "Registros con datos faltantes (nombre o importes vacíos) no pueden auditarse y se marcan como incompletos.",
+      "severidad": "alta"
+    }
+  ]
+}
