@@ -133,6 +133,11 @@ preview al terminar.
 
 ## Roadmap sugerido (de aquí para adelante)
 
+> Ver `docs/reglas_reales_spec.md` — mapeo de los ~18 análisis de un cierre
+> fiscal real (ISR personas morales), extraído de una plantilla genérica sin
+> datos de cliente. Incluye qué se puede construir ya sobre el modelo de
+> datos actual y qué requiere persistencia multi-año.
+
 1. **Ahora**: valida con Misael que la lógica de clasificación y hallazgos
    tiene sentido con balanzas reales (anonimizadas) de sus clientes. Este es
    el paso que más importa antes de escribir una sola línea más de código.
